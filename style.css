@@ -1,0 +1,94 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: auto;
+    overflow-x: hidden;
+}
+
+main{
+    overflow-x: hidden;
+    margin: 2rem 0;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(25, 235, 200);
+    color: white;
+    padding: 2rem;
+}
+
+.candidate-list{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+    width: 100%;
+    margin: 1rem;
+}
+
+.candidate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    background-color: rgba(239, 239, 239, 0.728);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.151);
+    padding: 1rem;
+    min-height: 450px;
+    height: auto;
+}
+
+.candidate img{
+    max-width: 200px;
+    border-radius: 4px;
+}
+
+.candidate div{
+    display: flex;
+    flex-direction: column;
+}
+
+.candidate label{
+    background-color: rgb(45, 186, 228);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-vote {
+    display: none;
+}
+
+.candidate .btn-vote:checked ~ label {
+    background-color:  rgba(16, 211, 149, 0.986);
+}
+
+
+footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.429);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+footer p{
+    font-size: small;
+}
+
+@media (max-width:420px){
+    .candidate-list{
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+}
